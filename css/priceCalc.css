@@ -1,0 +1,303 @@
+.PriceCalculator {
+    display: flex;
+    width: 100%;
+    max-width: 954px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 74px;
+    padding-bottom: 74px;
+}
+@media all and (max-width: 848px) {
+    .PriceCalculator {
+        padding-right: 40px;
+        padding-left: 40px;
+   }
+}
+.PriceCalculator > .calculator-title {
+    width: 100%;
+    font-size: 36px;
+}
+@media all and (max-width: 848px) {
+    .PriceCalculator > .calculator-title {
+        text-align: center;
+   }
+}
+.PriceCalculator > .calculator-title.hide {
+    display: none;
+}
+.PriceCalculator > .calculator-form {
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+}
+@media all and (max-width: 848px) {
+    .PriceCalculator > .calculator-form {
+        flex-direction: column;
+   }
+}
+.PriceCalculator > .calculator-form.hide {
+    display: none;
+}
+.PriceCalculator > .calculator-form > .input {
+    display: flex;
+    height: 64px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    align-items: center;
+    border: 1px solid rgba(105, 105, 105, 0.5);
+    padding: 0 16px;
+    position: relative;
+}
+.PriceCalculator > .calculator-form > .input:hover {
+    cursor: text;
+}
+.PriceCalculator > .calculator-form > .input:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+@media all and (max-width: 848px) {
+    .PriceCalculator > .calculator-form > .input:first-child {
+        border-radius: 0;
+   }
+}
+.PriceCalculator > .calculator-form > .input:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+@media all and (max-width: 848px) {
+    .PriceCalculator > .calculator-form > .input:last-child {
+        border-radius: 0;
+   }
+}
+.PriceCalculator > .calculator-form > .input > input {
+    width: 100%;
+    background: unset;
+    color: #3b3b3b;
+    font-weight: 600;
+    font-size: 16px;
+    border: unset;
+}
+.PriceCalculator > .calculator-form > .input > input::placeholder {
+    opacity: 0.75;
+    font-weight: 500;
+}
+.PriceCalculator > .calculator-form > .input > input:focus::placeholder {
+    opacity: 0;
+}
+.PriceCalculator > .calculator-form > .input > label {
+    display: none;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 13px;
+    position: absolute;
+    top: 2px;
+}
+.PriceCalculator > .calculator-form > .input > input:focus + label, .PriceCalculator > .calculator-form > .input > input:not([value=""]) + label {
+    display: block;
+}
+.PriceCalculator > .calculator-form > .input > .input-autocomplete-items {
+    display: none;
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(105, 105, 105, 0.5);
+    border-radius: 8px;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 2;
+}
+.PriceCalculator > .calculator-form > .input > .input-autocomplete-items > .item {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 0 10px;
+}
+.PriceCalculator > .calculator-form > .input > .input-autocomplete-items > .item:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.05);
+}
+.PriceCalculator > .calculator-form > .input > .input-autocomplete-items > .item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.PriceCalculator > .calculator-form > .input > .input-autocomplete-items > .item > svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    stroke: rgba(0, 0, 0, 0.75);
+}
+.PriceCalculator > .calculator-form > .input > .input-autocomplete-items > .item > span {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    margin-left: 10px;
+}
+.PriceCalculator > .calculator-form > .input > input:focus + label + .input-autocomplete-items:not(:empty), .PriceCalculator > .calculator-form > .input > .input-autocomplete-items:not(:empty):active {
+    display: flex;
+}
+.PriceCalculator > .calculator-form .button-calculator {
+    display: flex;
+    height: 64px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(105, 105, 105, 0.5);
+}
+.PriceCalculator > .calculator-form .button-calculator:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+@media all and (max-width: 848px) {
+    .PriceCalculator > .calculator-form .button-calculator:last-child {
+        border-radius: 0;
+   }
+}
+.PriceCalculator > .calculator-form .button-calculator.button-swap {
+    width: 64px;
+    height: 64px;
+    background: #f0f0f0;
+}
+@media all and (max-width: 848px) {
+    .PriceCalculator > .calculator-form .button-calculator.button-swap {
+        width: 100%;
+   }
+}
+.PriceCalculator > .calculator-form .button-calculator.button-swap:hover {
+    background: #e1e1e1;
+}
+.PriceCalculator > .calculator-form .button-calculator.button-swap:active {
+    background: #e8e8e8;
+}
+.PriceCalculator > .calculator-form .button-calculator.button-submit {
+    background: #239a54;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    border: unset;
+    padding: 0 24px;
+}
+.PriceCalculator > .calculator-form .button-calculator.button-submit:hover {
+    background: #1e8a4b;
+}
+.PriceCalculator > .calculator-form .button-calculator.button-submit:active {
+    background: #20a256;
+}
+.PriceCalculator > .calculator-form .button-calculator > svg {
+    margin-right: 4px;
+}
+.PriceCalculator > .loading-spinner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 50px;
+}
+.PriceCalculator > .loading-spinner > svg {
+    width: 100px;
+    height: 100px;
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+   }
+}
+.PriceCalculator > .loading-spinner > svg > .path {
+    stroke: #93bfec;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+   }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+   }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+   }
+}
+.PriceCalculator > .result-back {
+    width: 100%;
+}
+.PriceCalculator > .result-back > span {
+    color: #0267c1;
+    border-bottom: 1px dotted;
+}
+.PriceCalculator > .result-back > span:hover {
+    cursor: pointer;
+    color: #005eb0;
+}
+.PriceCalculator > .result-back > span:active {
+    color: #005098;
+}
+.PriceCalculator > .result-data {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+.PriceCalculator > .result-data > .routes {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.PriceCalculator > .result-data > .routes > .route {
+    font-size: 13px;
+    border-bottom: 1px dotted #000;
+    position: relative;
+}
+.PriceCalculator > .result-data > .routes > .route.to {
+    text-align: right;
+}
+.PriceCalculator > .result-data > .routes > .route > span:first-child {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    position: absolute;
+    top: -20px;
+}
+.PriceCalculator > .result-data > .routes > .route.to > span:first-child {
+    right: 0;
+}
+.PriceCalculator > .result-data > .routes > .line {
+    display: block;
+    height: 1px;
+    flex-grow: 1;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+    margin: 0 30px;
+    position: relative;
+}
+.PriceCalculator > .result-data > .routes > .line > .distance {
+    color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.PriceCalculator > .result-data > .price {
+    width: 100%;
+    text-align: right;
+    margin-top: 40px;
+}
+.PriceCalculator > .result-data > .price > span:first-child {
+    font-size: 20px;
+}
+.PriceCalculator > .result-data > .price > span:last-child {
+    color: #1e8a4b;
+    font-weight: 500;
+    font-size: 32px;
+}
+.PriceCalculator > .result-data > .button-order {
+    font-weight: 400;
+    font-size: 22px;
+    padding: 0 40px;
+    margin-top: 40px;
+}

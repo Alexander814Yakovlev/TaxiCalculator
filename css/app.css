@@ -1,0 +1,27 @@
+footer.default-footer {
+    display: flex;
+    width: 100%;
+    min-height: 446px;
+    background: #263238;
+}
+
+.classic-button {
+    box-sizing: content-box;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    background: #ffdf39;
+    color: #000;
+    font-weight: 500;
+    font-size: 28px;
+    border-radius: 4px;
+    padding: 0 15px;
+}
+
+.classic-button:hover {
+    background: #e0c32b;
+}
+
+.classic-button:active {
+    background: #af981d;
+}

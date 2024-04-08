@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta
+        content="Заказывайте междугороднее такси из аэропортов, вокзалов и отелей. Фиксированная цена. Бронирование в онлайне. Русскоязычная поддержка 24/7."
+        name="description">
+    <meta content="заказать трансфер, заказать такси, такси межгород, из аэропорта, в отель, цена" name="keywords">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml">
+    <title>Fleeka такси — заказ такси по межгороду</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/topBanner.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/priceCalc.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a1856c5e-2ccc-4ab6-a0a4-63a8837cceda&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/calculator.js"></script>
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="App">
+            <nav class="Header navbar navbar-default"><a href="/" class="navbar__brand"><img alt="logo"
+                        src="/logo/fleeka-logo-dark.svg" height="50px"></a>
+                <div class="navbar__links"><a href="/#help" class="navbar__link"><span>Помощь</span></a><a
+                        href="/policy" class="navbar__link"><span>Пользовательское соглашение</span></a></div>
+                <div class="navbar__mobile-burger"><svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                        height="50px" width="50px">
+                        <path
+                            d="M 5 9 L 5 11 L 45 11 L 45 9 L 5 9 z M 5 24 L 5 26 L 45 26 L 45 24 L 5 24 z M 5 39 L 5 41 L 45 41 L 45 39 L 5 39 z">
+                        </path>
+                    </svg></div>
+            </nav>
+            <section class="Main">
+                <section class="TopBanner">
+                    <div class="TopBanner__content">
+                        <div class="phone-call">
+                            <div class="text">Закажите междугороднее<br>такси по телефону</div><a
+                                href="tel:+79507007071" class="classic-button color-yellow">8-(950)-700-70-71</a>
+                        </div>
+                        <div class="socials-wrapper">
+                            <div class="text">Или напишите нам в</div><a href="https://t.me/taxi036" rel="noreferrer"
+                                target="_blank"><img alt="tg"
+                                    src="img/tg.svg"
+                                    height="24px"><span>Telegram</span></a>
+                            <div class="text">или</div><a href="https://wa.me/79507007071" rel="noreferrer"
+                                target="_blank"><img alt="wtsapp"
+                                    src="img/whatsApp.svg"
+                                    height="24px"><span>Whatsapp</span></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="PriceCalculator">
+                    <div class="calculator-title">Рассчитать цену поездки</div>
+                    <!-- <div class="calculator-form">
+                        <div class="input"><input class="input-calculator input-from" placeholder="Откуда (город)"
+                                type="text" value=""><label for="calculator_input_from">Откуда</label>
+                            <div class="input-autocomplete-items"></div>
+                        </div><button class="button-calculator button-swap"><svg viewBox="0 0 16 16"
+                                xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="none"
+                                class="icon icon--sm icon--center">
+                                <path d="M12.01 3H0v2h12.01v3L16 4l-3.99-4v3zM3.99 13H16v-2H3.99V8L0 12l3.99 4v-3z"
+                                    fill="#6C7C8C" fill-opacity=".5"></path>
+                            </svg></button>
+                        <div class="input"><input class="input-calculator input-to" placeholder="Куда (город)"
+                                type="text" value=""><label for="calculator_input_to">Куда</label>
+                            <div class="input-autocomplete-items"></div>
+                        </div><button class="button-calculator button-submit"><svg viewBox="0 0 19 19"
+                                xmlns="http://www.w3.org/2000/svg" height="19" width="19" fill="none">
+                                <path
+                                    d="M6.279 11.95h-.858L0 17.38 1.619 19l5.431-5.42v-.859l.294-.304a7.03 7.03 0 0 0 4.595 1.705 7.061 7.061 0 1 0-7.061-7.06 7.03 7.03 0 0 0 1.705 4.594l-.304.294zm10.549-4.89a4.882 4.882 0 0 1-4.889 4.889A4.882 4.882 0 0 1 7.051 7.06a4.882 4.882 0 0 1 4.888-4.888 4.882 4.882 0 0 1 4.889 4.888z"
+                                    fill="#fff" clip-rule="evenodd" fill-rule="evenodd"></path>
+                            </svg>Узнать цену</button>
+                    </div> -->
+                    <div id="map"></div>
+                </section>
+                <section class="LandingFeatures">
+                    <div class="wrap">
+                        <div class="title">Преимущества</div>
+                        <div class="features-list">
+                            <div class="features-item"><svg viewBox="0 0 100.5 100.5" xmlns="http://www.w3.org/2000/svg"
+                                    id="Layer_1" version="1.1" x="0px" y="0px">
+                                    <path
+                                        d="M61.806,53.522c12.454,0,22.587-10.133,22.587-22.588S74.26,8.346,61.806,8.346h-36.7c-0.829,0-1.5,0.671-1.5,1.5  s0.671,1.5,1.5,1.5h7.358l-0.07,39.176H25.13c-0.829,0-1.5,0.672-1.5,1.5s0.671,1.5,1.5,1.5h7.259l-0.02,11.052h-7.264  c-0.829,0-1.5,0.672-1.5,1.5s0.671,1.5,1.5,1.5h7.258l-0.04,22.577c-0.001,0.829,0.669,1.501,1.498,1.503c0,0,0.001,0,0.002,0  c0.827,0,1.499-0.67,1.5-1.497l0.04-22.583h27.951c0.828,0,1.5-0.672,1.5-1.5s-0.672-1.5-1.5-1.5H35.37l0.02-11.052H61.806z   M35.464,11.346h26.342c10.8,0,19.587,8.788,19.587,19.589c0,10.8-8.787,19.587-19.587,19.587H35.395L35.464,11.346z">
+                                    </path>
+                                </svg><span>Низкие цены на поездки</span></div>
+                            <div class="features-item"><svg viewBox="0 0 100.353 100.352"
+                                    xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" x="0px" y="0px">
+                                    <g>
+                                        <path
+                                            d="M49.982,17.015c-18.555,0-33.65,15.096-33.65,33.65s15.096,33.65,33.65,33.65c18.555,0,33.651-15.096,33.651-33.65   S68.537,17.015,49.982,17.015z M49.982,80.708c-16.566,0-30.044-13.477-30.044-30.043s13.478-30.044,30.044-30.044   c16.566,0,30.043,13.478,30.043,30.044S66.548,80.708,49.982,80.708z">
+                                        </path>
+                                        <path
+                                            d="M58.485,45.198l-7.258,7.258V26.64c0-0.996-0.808-1.803-1.804-1.803s-1.803,0.807-1.803,1.803v30.169   c0,0.119,0.012,0.238,0.036,0.355c0.01,0.051,0.029,0.098,0.044,0.148c0.018,0.063,0.033,0.127,0.059,0.189   c0.025,0.06,0.059,0.114,0.09,0.171c0.025,0.047,0.046,0.095,0.076,0.14c0.132,0.198,0.303,0.368,0.501,0.501   c0.037,0.025,0.077,0.041,0.115,0.062c0.064,0.036,0.126,0.074,0.195,0.103c0.054,0.022,0.111,0.035,0.166,0.052   c0.057,0.017,0.111,0.039,0.17,0.05c0.116,0.023,0.234,0.036,0.352,0.036s0.236-0.012,0.352-0.036   c0.059-0.012,0.114-0.033,0.171-0.051c0.055-0.017,0.111-0.029,0.165-0.051c0.07-0.029,0.134-0.068,0.199-0.105   c0.037-0.021,0.075-0.036,0.111-0.06c0.101-0.067,0.195-0.143,0.279-0.229l10.335-10.335c0.704-0.704,0.704-1.846,0-2.55   C60.331,44.493,59.19,44.493,58.485,45.198z">
+                                        </path>
+                                        <path
+                                            d="M49.983,9.044c-22.95,0-41.621,18.671-41.621,41.622s18.671,41.621,41.621,41.621c22.95,0,41.622-18.671,41.622-41.621   S72.933,9.044,49.983,9.044z M49.983,88.679c-20.961,0-38.015-17.053-38.015-38.014c0-20.961,17.053-38.015,38.015-38.015   s38.014,17.054,38.014,38.015C87.997,71.626,70.944,88.679,49.983,88.679z">
+                                        </path>
+                                    </g>
+                                </svg><span>Быстрая подача такси</span></div>
+                            <div class="features-item"><svg viewBox="0 0 100.176 100.178"
+                                    xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" x="0px" y="0px">
+                                    <path
+                                        d="M86.892,21.638H70.136l-1.567-5.716c-0.111-0.409-0.392-0.751-0.77-0.942c-0.378-0.191-0.82-0.214-1.214-0.062L48.733,21.77  c-0.187-0.084-0.393-0.132-0.611-0.132H26.666c-0.407,0-0.797,0.166-1.08,0.459L12.364,35.809c-0.286,0.225-0.479,0.541-0.546,0.892  c-0.008,0.036-0.01,0.074-0.015,0.111c-0.005,0.048-0.013,0.094-0.014,0.143c-0.001,0.019-0.006,0.038-0.006,0.057c0,0,0,0,0,0  c0,0.001,0,0.002,0,0.004V83.86c0,0.828,0.671,1.5,1.5,1.5H80.2c0.828,0,1.5-0.672,1.5-1.5v-5.188h5.191c0.828,0,1.5-0.672,1.5-1.5  V23.138C88.392,22.309,87.72,21.638,86.892,21.638z M70.832,35.517h-49.54l44.822-17.206L70.832,35.517z M27.303,24.638h13.959  l-22.161,8.507L27.303,24.638z M78.7,82.36H14.783V38.517H78.7V82.36z M85.392,75.672H81.7V37.017c0-0.829-0.672-1.5-1.5-1.5h-6.259  l-2.983-10.879h14.433V75.672z">
+                                    </path>
+                                </svg><span>Оплата заказа наличными водителю</span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="LandingHelp" id="help">
+                    <div class="wrap">
+                        <div class="help-faq">
+                            <h2>Частые вопросы</h2>
+                            <div class="faq-item"><span>Как заказать такси?</span>
+                                <p>Достаточно позвонить нам по телефону <a href="tel:+79507007071">8-(950)-700-70-71</a>
+                                    или же написать напрямую в <a href="https://t.me/taxi036" rel="noreferrer"
+                                        target="_blank">Telegram</a> или <a href="https://wa.me/79507007071"
+                                        rel="noreferrer" target="_blank">Whatsapp</a><br><br>Наш менеджер уточнит детали
+                                    поездки и подберёт вам нужную машину.</p>
+                            </div>
+                            <div class="faq-item"><span>Как узнать цену поездки?</span>
+                                <p>На сайте есть калькулятор, который рассчитывает цену поездки.<br>В поле «Откуда»
+                                    введите название города - место отправления, в поле «Куда» - место назначения. Можно
+                                    так же выбрать населенный пункт из выпадающих подсказок.<br><br>Далее нажмите кнопку
+                                    «Узнать цену».</p>
+                            </div>
+                            <div class="faq-item"><span>Как я найду своего водителя?</span>
+                                <p>Как только менеджер подберёт Вам машину, он сообщит детали и свяжет Вас с водителем.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="help">
+                            <h2>Помощь</h2><span>По любым вопросам</span>
+                            <div class="links">
+                                <div class="link"><svg viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg"
+                                        height="16" width="20" fill="none" class="">
+                                        <path
+                                            d="M20 2c0-1.1-.9-2-2-2H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2zm-2 0l-8 5-8-5h16zm-8 7L2 4v10h16V4l-8 5z"
+                                            fill="#805400" clip-rule="evenodd" fill-rule="evenodd" fill-opacity=".4">
+                                        </path>
+                                    </svg><a href="/cdn-cgi/l/email-protection#96fef3fae6d6f0faf3f3fdf7b8e4e3"><span
+                                            class="__cf_email__"
+                                            data-cfemail="1a727f766a5a7c767f7f717b34686f">[email&#160;protected]</span></a>
+                                </div>
+                                <div class="link"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                        height="20" width="20" fill="none" class="">
+                                        <path
+                                            d="M14 0H1C.45 0 0 .45 0 1v14l4-4h10c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1zm-1 2v7H3.17L2 10.17V2h11zm4 2h2c.55 0 1 .45 1 1v15l-4-4H5c-.55 0-1-.45-1-1v-2h13V4z"
+                                            fill="#805400" clip-rule="evenodd" fill-rule="evenodd" fill-opacity=".4">
+                                        </path>
+                                    </svg><a href="https://t.me/taxi036" rel="noreferrer" target="_blank">Написать в
+                                        телеграм</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+            <footer><span>© Fleeka 2024</span></footer>
+        </div>
+    </div>
+    <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+</body>
+
+</html>
